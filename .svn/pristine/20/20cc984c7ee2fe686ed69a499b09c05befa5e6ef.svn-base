@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+/*首页尾部样式*/
+*{
+	margin: 0 auto;
+}
+
+.div1_foot{
+	width: 100%;
+	height: 180px;
+	background:linear-gradient(#ddd,#fff);
+}
+
+.div2_foot{
+	width:800px;
+	height:120px;
+	margin:0 auto;
+}
+
+.ff1{
+	margin-left: 7%;
+}
+.ff2{
+	margin-left: 20%;
+}
+.ff3{
+	margin-left: 20%;
+}

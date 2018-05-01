@@ -1,0 +1,307 @@
+@CHARSET "UTF-8";
+*{
+	font-family: 微软雅黑;
+}
+.select-body{
+	width: 100%;
+	height: auto;
+	background-color: #f9f9f9;
+	padding: 0;
+	
+}
+
+/* 主体 */
+.select-container{
+	margin: 0 auto;
+	padding: 10px;
+	width: 960px;
+	min-height: 600px;	
+	background-color: white;
+	
+}
+
+/* 标题 */
+.select-container>h1{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	line-height: 60px;
+}
+
+/* 选择方式 */
+.guide{
+	border: 1px dashed #F90;
+	margin: 10px auto;
+	padding: 10px 20px;
+	font-size: 14px;
+	text-indent: 2em;
+	background: #F6F6F6;
+}
+.guide  input{
+	margin:0  10px;
+}
+.guidebtn{
+	margin-left: 10px;
+	cursor: pointer;
+	width: 65px;
+	height: 25px;
+	background-color: #f90;
+	border: 1px solid #f90;
+	border-radius: 3px;
+	color:#fff;
+}
+
+/* 老师列表 */
+.tea-list{
+	padding: 0 30px;
+	margin: 0 auto;
+	padding-left: 50px;
+}
+.teacher{
+	list-style: none;
+	float : left;
+	width: 200px;
+	height: 270px;
+	margin-right:10px;
+	margin-top: 10px;
+	/* border: 1px dashed #f90; */
+	position: relative;
+}
+.teacher > img{
+	width: 200px;
+	height: 270px;
+	border-radius: 3px;
+}
+.teacher > h3{
+	font-weight: normal;
+	font-size: 14px;
+	color: #fff;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+	transition: .3s ease all;
+	opacity: 1;
+}
+.teacher > b{
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	left: 95px;
+	top: 130px;
+	background: rgba(0,0,0,0);
+	transition: .3s ease all;
+}
+.detail-teacher{
+	display: none;
+	
+}
+.detail-teacher > h4{
+	border-bottom: 1px solid white;
+	font-weight: lighter;
+	line-height: 40px;
+	text-align: center;
+	font-size: 20px;
+}
+.detail-teacher > p{
+	
+}
+.teacher > .detail-teacher{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+	color: white;
+	position: absolute;
+}
+.summary-teacher{
+	padding: 10px;
+}
+.summary-teacher > input{
+	margin-left: 10px;
+	cursor: pointer;
+	width: 160px;
+	height: 35px;
+	background: #f90;
+	border:0;
+	border-radius: 3px;
+	color: white;
+	letter-spacing: .5em;
+}
+.jianjie{
+	height:100px;
+	overflow: hidden;
+}
+
+.summary-teacher > p{
+	margin-bottom: 10px;
+}
+
+.guanzhu{
+	margin-left:15px;
+	font-size:14px!important;
+	cursor:pointer;
+}
+.guanzhu:hover{
+	color:red;
+}
+
+.can{
+	display: none; 
+	background:black; 
+	opacity: 0.4; 
+	width:100%; 
+	height: 100%;  
+	position: fixed; 
+	z-index:7;
+	top:0px; 
+	left:0px;}
+
+.ti{
+	z-index:9;
+	width:400px; 
+	min-height:350px;
+	background:#fff;
+	padding: 15px 25px; 
+	border-radius:3px;
+	margin: 0 auto; 
+	display: none;
+}
+
+.tit{
+	margin-top:30px;
+	text-align:center;
+	letter-spacing:3px;
+	font-weight:400;
+	font-size:24px;
+}
+.tit2{
+	margin-top:10px;
+	text-align: center;
+	font-size:14px;
+	color:#bdbdbd;
+}
+.success{
+	width:150px;
+	hegiht:55px;
+	text-align: center;
+	line-height: 55px;
+	border-radius: 5px;
+	font-size:20px;
+	letter-spacing: 3px;
+	background:#696d87;
+	color:#fff;
+	border:1px solid #ddd;
+	display: none;
+}
+.x{
+	position: absolute;
+	right:-35px;
+	background: url(../images/cross.png)no-repeat;
+	width:25px;
+	height:25px;
+	cursor:pointer;
+}
+
+.write{
+	width:100%;
+	margin-top:20px;
+}
+.write>p{
+    margin-left:15px;	
+}
+.article{
+	width:100%;
+	padding:15px 15px;
+	min-height:150px;
+	border:2px solid #c9c9c9;
+	margin-top:10px;
+	max-height:250px;
+}
+.ti3{
+	padding-left: 78px;
+	font-size: 13px;
+	display: inline;
+}
+
+.file>input{
+	position: absolute;
+	cursor:pointer;  
+	left: 0px;
+	top:0px; 
+	opacity: 0; 
+	filter: 'alpha(opacity=0)';
+	height:40px;
+}
+.ti4{
+	width:150px;
+	height:40px;
+	border:0;
+	border-radius: 5px;
+	margin:25px auto;
+	text-align: center;
+	cursor:pointer;
+	line-height: 40px;
+	background:#25b925;;
+	color:#fff;
+	display: block;
+	font-size:18px;
+	letter-spacing: 10px;
+	font-weight:400;
+}
+
+
+/* ======================================= */
+.file_name{
+	  width: 245px;
+	  height: 30px;
+	  padding-left: 8px;
+	}
+a.input {
+	  width:100px;
+	  height:30px;
+	  line-height:30px;
+	  background:#f90;
+	  text-align:center;
+	  display:inline-block;/*具有行内元素的视觉，块级元素的属性 宽高*/
+	  overflow:hidden;/*去掉的话，输入框也可以点击*/
+	  position:relative;/*相对定位，为 #file 的绝对定位准备*/
+	  top:9px;
+	  border-radius: 5px;
+	  font-size:14px;
+	  color:#fff;
+	}
+a.input:hover {
+	  background:#f96;
+	  color: #ffffff;
+	}
+	a{
+	  text-decoration:none;
+	  color:#FFF;
+	}
+	.file {
+	  opacity:0;/*设置此控件透明度为零，即完全透明*/
+	  filter:alpha(opacity=0);/*设置此控件透明度为零，即完全透明针对IE*/
+	  font-size:100px;
+	  position:absolute;/*绝对定位，相对于 .input */
+	  top:0;
+	  right:0;
+	  height: 30px;
+	  width: 275px;
+	}
+.btnNot{
+	width: 100%;
+    height: 90%;
+	display: block;
+    background: #fff;
+    opacity: 0.5;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 8px;
+	
+}

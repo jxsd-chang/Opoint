@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.opt.mapper.MessageMapper" >
+  <resultMap id="BaseResultMap" type="cn.opt.po.Message" >
+    <id column="mes_id" property="mesId" jdbcType="INTEGER" />
+    <result column="mes_info" property="mesInfo" jdbcType="VARCHAR" />
+    <result column="mes_time" property="mesTime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    mes_id, mes_info, mes_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.opt.po.MessageExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from message
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from message
+    where mes_id = #{mesId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from message
+    where mes_id = #{mesId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.opt.po.MessageExample" >
+    delete from message
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.opt.po.Message" >
+    insert into message (mes_id, mes_info, mes_time
+      )
+    values (#{mesId,jdbcType=INTEGER}, #{mesInfo,jdbcType=VARCHAR}, #{mesTime,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.opt.po.Message" >
+    insert into message
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="mesId != null" >
+        mes_id,
+      </if>
+      <if test="mesInfo != null" >
+        mes_info,
+      </if>
+      <if test="mesTime != null" >
+        mes_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="mesId != null" >
+        #{mesId,jdbcType=INTEGER},
+      </if>
+      <if test="mesInfo != null" >
+        #{mesInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="mesTime != null" >
+        #{mesTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.opt.po.MessageExample" resultType="java.lang.Integer" >
+    select count(*) from message
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update message
+    <set >
+      <if test="record.mesId != null" >
+        mes_id = #{record.mesId,jdbcType=INTEGER},
+      </if>
+      <if test="record.mesInfo != null" >
+        mes_info = #{record.mesInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mesTime != null" >
+        mes_time = #{record.mesTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update message
+    set mes_id = #{record.mesId,jdbcType=INTEGER},
+      mes_info = #{record.mesInfo,jdbcType=VARCHAR},
+      mes_time = #{record.mesTime,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.opt.po.Message" >
+    update message
+    <set >
+      <if test="mesInfo != null" >
+        mes_info = #{mesInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="mesTime != null" >
+        mes_time = #{mesTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where mes_id = #{mesId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.opt.po.Message" >
+    update message
+    set mes_info = #{mesInfo,jdbcType=VARCHAR},
+      mes_time = #{mesTime,jdbcType=VARCHAR}
+    where mes_id = #{mesId,jdbcType=INTEGER}
+  </update>
+</mapper>

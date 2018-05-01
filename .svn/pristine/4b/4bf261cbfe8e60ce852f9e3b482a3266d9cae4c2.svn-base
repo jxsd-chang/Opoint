@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.opt.mapper.BrushMapper" >
+  <resultMap id="BaseResultMap" type="cn.opt.po.Brush" >
+    <id column="brush_id" property="brushId" jdbcType="INTEGER" />
+    <result column="kp_id" property="kpId" jdbcType="INTEGER" />
+    <result column="brush_title" property="brushTitle" jdbcType="VARCHAR" />
+    <result column="brush_parse" property="brushParse" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    brush_id, kp_id, brush_title, brush_parse
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.opt.po.BrushExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from brush
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from brush
+    where brush_id = #{brushId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from brush
+    where brush_id = #{brushId,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.opt.po.BrushExample" >
+    delete from brush
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.opt.po.Brush" >
+    insert into brush (brush_id, kp_id, brush_title, 
+      brush_parse)
+    values (#{brushId,jdbcType=INTEGER}, #{kpId,jdbcType=INTEGER}, #{brushTitle,jdbcType=VARCHAR}, 
+      #{brushParse,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.opt.po.Brush" >
+    insert into brush
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="brushId != null" >
+        brush_id,
+      </if>
+      <if test="kpId != null" >
+        kp_id,
+      </if>
+      <if test="brushTitle != null" >
+        brush_title,
+      </if>
+      <if test="brushParse != null" >
+        brush_parse,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="brushId != null" >
+        #{brushId,jdbcType=INTEGER},
+      </if>
+      <if test="kpId != null" >
+        #{kpId,jdbcType=INTEGER},
+      </if>
+      <if test="brushTitle != null" >
+        #{brushTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="brushParse != null" >
+        #{brushParse,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.opt.po.BrushExample" resultType="java.lang.Integer" >
+    select count(*) from brush
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update brush
+    <set >
+      <if test="record.brushId != null" >
+        brush_id = #{record.brushId,jdbcType=INTEGER},
+      </if>
+      <if test="record.kpId != null" >
+        kp_id = #{record.kpId,jdbcType=INTEGER},
+      </if>
+      <if test="record.brushTitle != null" >
+        brush_title = #{record.brushTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.brushParse != null" >
+        brush_parse = #{record.brushParse,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update brush
+    set brush_id = #{record.brushId,jdbcType=INTEGER},
+      kp_id = #{record.kpId,jdbcType=INTEGER},
+      brush_title = #{record.brushTitle,jdbcType=VARCHAR},
+      brush_parse = #{record.brushParse,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.opt.po.Brush" >
+    update brush
+    <set >
+      <if test="kpId != null" >
+        kp_id = #{kpId,jdbcType=INTEGER},
+      </if>
+      <if test="brushTitle != null" >
+        brush_title = #{brushTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="brushParse != null" >
+        brush_parse = #{brushParse,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where brush_id = #{brushId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.opt.po.Brush" >
+    update brush
+    set kp_id = #{kpId,jdbcType=INTEGER},
+      brush_title = #{brushTitle,jdbcType=VARCHAR},
+      brush_parse = #{brushParse,jdbcType=VARCHAR}
+    where brush_id = #{brushId,jdbcType=INTEGER}
+  </update>
+</mapper>

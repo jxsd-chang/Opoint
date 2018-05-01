@@ -1,0 +1,250 @@
+@CHARSET "UTF-8";
+
+.tit{
+	font-size:25px;
+	font-weight:bold;
+	text-align: center;
+	margin:35px;
+	letter-spacing: 4px;
+}
+.zuoye{
+	width:430px;
+	height:50px;
+	margin:0 auto;
+	list-style: none;
+}
+.zuoye>li{
+	width:195px;
+	height:50px;
+	line-height: 50px;
+	float:left;
+	background:linear-gradient(#f8cf45,#f90,#f8cf45);
+	text-align: center;
+	border-radius: 4px;
+	cursor: pointer;
+	color:#fff;
+	font-weight:bold;
+	position: relative;
+}
+.aa::after{
+	position: absolute;
+	top: 50px;
+	left: 90px;
+	content: url("../images/jt2.png");
+}
+.zuoye>li:active{
+	transform:translateY(2px);
+}
+.listdiv{
+	width:1000px;
+	min-height:500px;
+	margin:20px auto;
+}
+.empty{
+	font-size:23px;
+	text-align: center;
+}
+.homework{
+	width:600px;
+	height:60px;
+	padding:10px;
+	margin:10px auto;
+}
+.l2{
+	background:linear-gradient(#f0f0f0,#ddd,#f0f0f0);
+	height:40px;
+	width: 485px;
+	float: left;
+	overflow: hidden;
+}
+.leftitem{
+	margin-left: 35px;
+    width: 250px;
+	height:40px;
+	float:left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	border-radius:4px;
+	line-height:40px;
+	padding-left:15px;
+}
+.ll{
+	float:left;
+	width:200px;
+	height:40px;
+	border-left:1px solid #ddd;
+	line-height: 40px;
+}
+.l3{
+	font-size:12px;
+	color:#6e6e6e;
+	margin-left:15px;
+	display: inline-block;
+	float: left;
+}
+.l4{
+	width: 110px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.da{
+	float:right;
+	margin-top:8px;
+	margin-left:10px;
+	cursor: pointer;
+}
+.da img{
+	vertical-align: middle;
+}
+.da:hover{
+	color:#109bef;
+}
+.da span{
+	color:#fff;
+	margin-right:10px;
+	float:left;
+}
+.suc{
+	background:#f90;
+}
+.no{
+	background:#ff8e8e;
+}
+
+
+.work{
+	width:1000px;
+	min-height:600px;
+	margin:30px auto;
+}
+.zy{
+	float:left;
+	width:45%;
+	border-left:1px dashed #333;
+	border-right:1px dashed #333;
+}
+.title{
+	background:linear-gradient(#ddd,#f0f0f0);
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	font-size:18px;
+	letter-spacing: 3px;
+}
+.zy2{
+	border-top:1px solid #ffcf88;
+	border-bottom: 1px solid #ffcf88;
+	margin:20px auto;
+	width:80%;
+	min-height:100px;
+	padding:15px;
+	text-indent: 2em;
+	position: relative;
+}
+.date{
+	position:absolute;
+	bottom:5px;
+	right:5px;
+	font-size:12px;
+	color:#adadad;
+}
+.zy2 img{
+	cursor: pointer;
+	max-width:300px;
+	vertical-align: middle;
+}
+.hd{
+	float:right;
+	width:45%;
+	border-left:1px solid #8c8c8c;
+	border-right:1px solid #8c8c8c;
+}
+.ans{
+	width:80%;
+	margin:20px 45px;
+	min-height:200px;
+	resize: none;
+}
+.chuan{
+	border-top:1px solid #ffcf88;
+	border-bottom: 1px solid #ffcf88;
+	cursor: pointer;
+	margin: 20px;
+	padding:20px 25px;
+}
+/* ======================================= */
+
+.file_name{
+	  width: 245px;
+	  height: 30px;
+	  padding-left: 8px;
+	}
+a.input {
+	  width:100px;
+	  height:30px;
+	  line-height:30px;
+	  background:#f90;
+	  text-align:center;
+	  display:inline-block;/*具有行内元素的视觉，块级元素的属性 宽高*/
+	  overflow:hidden;/*去掉的话，输入框也可以点击*/
+	  position:relative;/*相对定位，为 #file 的绝对定位准备*/
+	  top:9px;
+	  border-radius: 5px;
+	  font-size:14px;
+	  color:#fff;
+	}
+a.input:hover {
+	  background:#f96;
+	  color: #ffffff;
+	}
+	a{
+	  text-decoration:none;
+	  color:#FFF;
+	}
+	.file {
+	  opacity:0;/*设置此控件透明度为零，即完全透明*/
+	  filter:alpha(opacity=0);/*设置此控件透明度为零，即完全透明针对IE*/
+	  font-size:100px;
+	  position:absolute;/*绝对定位，相对于 .input */
+	  top:0;
+	  right:0;
+	  height: 30px;
+	  width: 275px;
+	}
+
+.jiao{
+	width:140px;
+	height:40px;
+	margin:20px 150px;
+	background:#f90;
+	color:#fff;
+	border:0;
+	cursor:pointer;
+	border-radius:5px;
+	letter-spacing: 3px;
+	font-size: 18px;
+}
+
+
+.nn{
+	position: absolute;
+	width:140px;
+	height:40px;
+	opacity: 0.4;
+	left: 150px;
+	bottom: 20px;
+	background: #fff;
+	display: none;
+}
+
+.contan{
+	width:1000px;
+	min-height:600px;
+	margin:30px auto;
+}
+.fu{
+	margin-left:15px;
+}
+

@@ -1,0 +1,116 @@
+@CHARSET "UTF-8";
+.fenxi{
+	width: 100%;
+	/* background-color: #F6F6F6; */
+}
+.fenxi-container{
+	width: 1100px;
+	margin: 0 auto;
+	min-height: 300px;
+	background-color: white;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+.fenxi-title,.tuijian-title,.jiexi-title{
+	text-align: center;
+	height: 70px;
+	background-color: #F6F6F6;
+}
+.tuijian-title > p,.fenxi-title > p,.jiexi-title > p{
+	font-size: 22px;
+	padding: 20px 0;
+	font-weight: bold;
+	letter-spacing: 0.3em;
+	background: linear-gradient(#f0f0f0,#fff,#f0f0f0);
+}
+.tuijian-title > p:active,.fenxi-title > p:active,.jiexi-title > p:active{
+	color:inherit!important;
+}
+.fenxi-main{
+	width: 700px;
+	min-height: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+.fenxi-table{
+	width: 100%;
+	font-weight: bold;
+}
+.fenxi-table > tr:HOVER{
+	background-color: gray;
+}
+.fenxi-kno,.fenxi-cuoti{
+	width: 700px;
+	margin: 0 auto;
+	min-height: 220px;
+}
+
+/* 推荐知识点 */
+.kno-img{
+	float: left;
+	margin-top: 15px;s
+}
+.kno-list{
+	float: right;
+	padding: 40px;
+	font-size:15px;
+	margin-top: 18px;
+}
+.kno-list > ul{
+	margin-left: 30px;
+}
+.kno-list > ul li{
+	list-style: none;
+	padding: 5px 0;
+}
+
+/* 推荐错题 */
+.cuoti-img{
+	float: right;
+	margin-right: 50px;
+}
+.cuoti-list{
+	float: left;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+.cuoti-list > ul{
+	margin-left: 30px;
+}
+.cuoti-list > ul li{
+	list-style: none;
+	padding: 5px 0;
+}
+
+.keguan-jiexi{
+	visibility: hidden;
+	
+}
+.tj-list{
+	width: 390px;
+	height: auto;
+}
+/* 答案 */
+.daan-tanchauang{
+	z-index: 9;
+	min-width: 750px;
+	min-height: 200px;
+	background: #fff;
+	padding: 10px;
+	border: 1px solid #FFCECF;
+	border-radius: 10px;
+	margin: 0 auto;
+	position: absolute;
+	
+	top: 25%;
+	left: 26%;
+}
+
+
+
+
+
+
+
+

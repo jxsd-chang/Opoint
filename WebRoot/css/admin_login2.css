@@ -1,0 +1,87 @@
+@CHARSET "UTF-8";
+.adm-login{
+	
+	width: 100%;
+	height: 100%;
+	background-color: #3698BF;
+	min-height: 770px;
+	min-width: 1200px;
+}
+
+.adm-container{
+	margin: 0 auto;
+	padding:0;
+	position:relative;
+	width: 1200px;
+	height: 600px;
+	/* border: 2px black solid; */
+	top: 100px;
+	/* background-color: #71C5E7; */
+}
+
+.adm-foot{
+	position: fixed;
+	text-align: center;
+	font-size: 16px;
+	background-color: #71C5E7;
+	/* top: 80px; */
+	min-height: 70px;
+	line-height: 20px;
+	width: 100%;
+	bottom: 0px;
+}
+
+.adm-title{
+	color: white;
+	text-align: center;	
+}
+
+.adm-pic{
+	width: 800px;
+	min-height:300px;
+	border-radius: 15px;
+	background-color: #71C5E7;
+	margin-left: 200px;
+}
+
+.adm-tip{
+	width: 800px;
+	margin-left: 200px;
+	min-height: 25px;
+	/* background-color: #71C5E7;
+	border-radius: 15px; */
+	margin-top: 5px;
+	text-align: center;
+	
+}
+.adm-tip span{
+	font-size: 16px;
+	padding-top: 10px;
+} 
+.adm-input{
+	width: 800px;
+	min-height:50px;
+	border-radius: 15px;
+	background-color: #71C5E7;
+	margin-left: 200px;
+	margin-top: 5px;
+}
+.adm-input .adm-form{
+	top: 15px;	
+	
+	margin-left: 60px; 
+	position: relative;
+	color: white;
+	
+	
+	float: left;
+}
+
+.adm-input .adm-form .input{
+	max-width: 200px;
+	float: left;
+	margin-left: 5px;
+}
+input{
+	float: left;
+}

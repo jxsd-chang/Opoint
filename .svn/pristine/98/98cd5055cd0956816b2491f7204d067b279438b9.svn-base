@@ -1,0 +1,138 @@
+@CHARSET "UTF-8";
+a{
+	text-decoration: none;
+}
+.mryl{
+	width: 100%;
+	min-height: 600px;
+	background-color: #F6F6F6;
+	float: left;
+}
+.mryl-container{
+	margin: 0 auto;
+	width: 1200px;
+	height: auto;
+}
+.location p > a:HOVER{
+	color: #F90;
+}
+
+.mryl-left{
+	float: left;
+	width: 870px;
+	line-height: 30px;
+	background-color: white;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+
+.mtyl-top-title span{
+	width:120px;
+	margin:10px auto;
+	font-size: 26px;
+	text-align:center;
+	line-height: 36px;
+	height: 36px;
+	font-weight:bold;
+	letter-spacing:4px;
+	display:block;
+}
+
+.mryl-list{
+	border-top: 1px #F90 solid;
+	padding: 10px 20px;
+	font-size: 14px;
+	min-height: 500px;
+}
+.mryl-list ul li >a:HOVER{
+	color: #F90;
+}
+.mryl-list >ul li{
+	list-style: none;
+}
+.mryl-list ul li > span {
+	float: right;
+}
+.mryl-list > h1 {
+	font-size: 24px;
+	text-align: center;
+	line-height: 60px;
+	
+}
+.mryl-list > .guide {
+	border: 1px dashed #F90;
+	margin: 10px auto;
+	padding: 10px 20px;
+	font-size: 18px;
+	text-indent: 2em;
+	background: #F6F6F6;
+	text-align: center;
+}
+.timu-pic{
+	min-width: 750px;
+	margin-top:15px;
+}
+.timu-pic:HOVER{
+	border: 1px #f90 solid;
+}
+.mryl-fenye >a{
+	padding: 0px 12px;
+	display: block;
+	background: #f4f4f4;
+	float: left;
+	overflow: hidden;
+	margin-right: 10px;
+	line-height: 30px;
+	height: 30px;
+	color: #333 !important;
+}
+.mryl-right{
+	float: right;
+	width: 300px;
+	min-height:300px;
+	margin-left:30px;
+	margin-top: 75px;
+}
+.mryl-right > ul li{
+	list-style: none;
+ 	background-color: white;
+	box-shadow: 0 3px 8px rgba(26,26,26,.2);
+	border-radius: 3px;
+	padding: 10px;
+ }
+.mryl-r-1{
+	
+}
+.mryl-r-2{
+	margin-top: 30px;
+}
+.tiji{
+	width:100px;
+	height:35px;
+	background:#f90;
+	color:#fff;
+	border-radius: 5px;
+	cursor: pointer;
+	border:0;
+}
+
+.show-answer{
+	text-align:center;
+	background:linear-gradient(#f0f0f0,#fff,#f0f0f0);
+	font-size: 16px;
+	font-weight: bold;
+	height:50px;
+	line-height: 50px;
+	letter-spacing: 3px;
+	cursor: pointer;
+	margin: 40px;
+	display: none;
+}
+
+
+
+
+
+
+

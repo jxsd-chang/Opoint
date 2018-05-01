@@ -1,0 +1,68 @@
+@CHARSET "UTF-8";
+*{
+	font-family: 微软雅黑;
+}
+.story-body{
+	width: 100%;
+	min-height: 700px;
+	background-color: #F6F6F6;
+}
+.story-container{
+	margin: 0 auto;
+	width:960px;
+	min-height: 600px;	
+	padding: 10px;
+}
+.story-text{
+	/*左边文章 */
+	width: 700px;
+	min-height: 500px;
+	float: left;
+}
+
+.story-left{
+	/* 右边栏框 */
+	width: 230px;
+	float: right;
+	
+}
+.story-menu{
+	/* 右边菜单 */
+	width: 250px;
+	height: 80px;
+}
+.story-advice{
+	/* 右边推荐 */
+	width: 250px;
+	min-height:300px;
+	
+	margin-top: 10px;
+	
+}
+ul li{
+	list-style: none;
+	float: left;
+}
+.story-advice > ul li{
+	padding: 3px;
+	margin-left: 30px;
+}
+.story-advice > ul li:HOVER{
+	color: #f90;
+}
+.story-menu > ul li{
+	margin-top: 25px;
+	margin-left: 20px;
+}
+.story-advice,.story-text,.story-menu{
+	/* 阴影 */
+	border-radius: 5px;
+	box-shadow: 0 1px 3px rgba(26,26,26,.1);
+	background-color: white;
+}
+.story-text-head{
+	/* 正文题目 */
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px dashed #dadada;
+}

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.opt.mapper.PublishMapper" >
+  <resultMap id="BaseResultMap" type="cn.opt.po.Publish" >
+    <id column="publish_id" property="publishId" jdbcType="VARCHAR" />
+    <result column="tea_id" property="teaId" jdbcType="INTEGER" />
+    <result column="cla_id" property="claId" jdbcType="INTEGER" />
+    <result column="work_title" property="workTitle" jdbcType="VARCHAR" />
+    <result column="work_info" property="workInfo" jdbcType="VARCHAR" />
+    <result column="work_pic" property="workPic" jdbcType="VARCHAR" />
+    <result column="publish_time" property="publishTime" jdbcType="VARCHAR" />
+    <result column="publish_endtime" property="publishEndtime" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    publish_id, tea_id, cla_id, work_title, work_info, work_pic, publish_time, publish_endtime
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="cn.opt.po.PublishExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from publish
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from publish
+    where publish_id = #{publishId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from publish
+    where publish_id = #{publishId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="cn.opt.po.PublishExample" >
+    delete from publish
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="cn.opt.po.Publish" >
+    insert into publish (publish_id, tea_id, cla_id, 
+      work_title, work_info, work_pic, 
+      publish_time, publish_endtime)
+    values (#{publishId,jdbcType=VARCHAR}, #{teaId,jdbcType=INTEGER}, #{claId,jdbcType=INTEGER}, 
+      #{workTitle,jdbcType=VARCHAR}, #{workInfo,jdbcType=VARCHAR}, #{workPic,jdbcType=VARCHAR}, 
+      #{publishTime,jdbcType=VARCHAR}, #{publishEndtime,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.opt.po.Publish" >
+    insert into publish
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="publishId != null" >
+        publish_id,
+      </if>
+      <if test="teaId != null" >
+        tea_id,
+      </if>
+      <if test="claId != null" >
+        cla_id,
+      </if>
+      <if test="workTitle != null" >
+        work_title,
+      </if>
+      <if test="workInfo != null" >
+        work_info,
+      </if>
+      <if test="workPic != null" >
+        work_pic,
+      </if>
+      <if test="publishTime != null" >
+        publish_time,
+      </if>
+      <if test="publishEndtime != null" >
+        publish_endtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="publishId != null" >
+        #{publishId,jdbcType=VARCHAR},
+      </if>
+      <if test="teaId != null" >
+        #{teaId,jdbcType=INTEGER},
+      </if>
+      <if test="claId != null" >
+        #{claId,jdbcType=INTEGER},
+      </if>
+      <if test="workTitle != null" >
+        #{workTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="workInfo != null" >
+        #{workInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="workPic != null" >
+        #{workPic,jdbcType=VARCHAR},
+      </if>
+      <if test="publishTime != null" >
+        #{publishTime,jdbcType=VARCHAR},
+      </if>
+      <if test="publishEndtime != null" >
+        #{publishEndtime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="cn.opt.po.PublishExample" resultType="java.lang.Integer" >
+    select count(*) from publish
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update publish
+    <set >
+      <if test="record.publishId != null" >
+        publish_id = #{record.publishId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.teaId != null" >
+        tea_id = #{record.teaId,jdbcType=INTEGER},
+      </if>
+      <if test="record.claId != null" >
+        cla_id = #{record.claId,jdbcType=INTEGER},
+      </if>
+      <if test="record.workTitle != null" >
+        work_title = #{record.workTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workInfo != null" >
+        work_info = #{record.workInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workPic != null" >
+        work_pic = #{record.workPic,jdbcType=VARCHAR},
+      </if>
+      <if test="record.publishTime != null" >
+        publish_time = #{record.publishTime,jdbcType=VARCHAR},
+      </if>
+      <if test="record.publishEndtime != null" >
+        publish_endtime = #{record.publishEndtime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update publish
+    set publish_id = #{record.publishId,jdbcType=VARCHAR},
+      tea_id = #{record.teaId,jdbcType=INTEGER},
+      cla_id = #{record.claId,jdbcType=INTEGER},
+      work_title = #{record.workTitle,jdbcType=VARCHAR},
+      work_info = #{record.workInfo,jdbcType=VARCHAR},
+      work_pic = #{record.workPic,jdbcType=VARCHAR},
+      publish_time = #{record.publishTime,jdbcType=VARCHAR},
+      publish_endtime = #{record.publishEndtime,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.opt.po.Publish" >
+    update publish
+    <set >
+      <if test="teaId != null" >
+        tea_id = #{teaId,jdbcType=INTEGER},
+      </if>
+      <if test="claId != null" >
+        cla_id = #{claId,jdbcType=INTEGER},
+      </if>
+      <if test="workTitle != null" >
+        work_title = #{workTitle,jdbcType=VARCHAR},
+      </if>
+      <if test="workInfo != null" >
+        work_info = #{workInfo,jdbcType=VARCHAR},
+      </if>
+      <if test="workPic != null" >
+        work_pic = #{workPic,jdbcType=VARCHAR},
+      </if>
+      <if test="publishTime != null" >
+        publish_time = #{publishTime,jdbcType=VARCHAR},
+      </if>
+      <if test="publishEndtime != null" >
+        publish_endtime = #{publishEndtime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where publish_id = #{publishId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.opt.po.Publish" >
+    update publish
+    set tea_id = #{teaId,jdbcType=INTEGER},
+      cla_id = #{claId,jdbcType=INTEGER},
+      work_title = #{workTitle,jdbcType=VARCHAR},
+      work_info = #{workInfo,jdbcType=VARCHAR},
+      work_pic = #{workPic,jdbcType=VARCHAR},
+      publish_time = #{publishTime,jdbcType=VARCHAR},
+      publish_endtime = #{publishEndtime,jdbcType=VARCHAR}
+    where publish_id = #{publishId,jdbcType=VARCHAR}
+  </update>
+</mapper>

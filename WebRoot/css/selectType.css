@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+body{
+	width: 100%;
+	min-width: 1200px;
+}
+.select-container{
+	width: 1200px;
+	min-height: 750px;
+	margin: 0 auto;
+}
+.select-container > ul li {
+	list-style: none;
+	float: left;
+	width: 45%;
+	padding: 28px 0px 28px 0px;
+	border-bottom: 1px dashed #dadada;
+	margin-left: 5%;
+}
+
+.select-container  ul{
+	width: inherit;
+	min-height: 600px;
+}
+.select-text{
+	width: 68%;
+	float: left;
+}
+.select-text h3 {
+	font-size: 26px;
+	margin-bottom: 15px;
+	color: #666;
+} 
+
+.select-text p{
+	font-size: 16px;
+	color: #999;
+	line-height: 24px;
+	height: 60px;
+}
+.yicuoti,.yingjifen{
+	border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+

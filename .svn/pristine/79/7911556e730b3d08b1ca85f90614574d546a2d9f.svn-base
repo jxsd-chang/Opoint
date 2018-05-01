@@ -1,0 +1,263 @@
+@CHARSET "UTF-8";
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+	padding:0px;
+}
+a{
+	color:inherit;
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: none;
+}
+li{
+	list-style:none;
+}
+
+/*点|通|网---样式*/
+.div0_top{
+	position:relative;
+	background-color:#fff;
+	width: 100%;
+	height: 90px;
+	padding-top:20px;
+	border-bottom:1px solid #ddd;
+}
+.div0_top2{
+	position:fixed;
+	background-color:#fff;
+	border-bottom:1px solid #ddd;
+	width: 100%;
+	height: 90px;
+	padding-top:20px;
+	z-index:9999;
+	opacity:0.9;
+	top:0;
+}
+.div1_top{
+	width:1200px;
+	margin:0px auto;
+	height:70px;
+}
+.top_1{
+	font-size: 36px;
+	color:white;
+	font-weight: bolder;
+	font-style: inherit;
+	margin-left: 10px;
+    display: block;
+    float:left;
+    width: 145px;
+}
+.top_1 a:hover{
+	text-decoration: none;
+}
+
+.top-nav{
+	width:670px;
+	float:left;
+	margin-left:115px;
+	height:55px;
+	background:#fff;
+}
+.top-nav2{
+	width:300px;
+	height:auto;
+	background:#fff;
+	position:relative;
+	z-index:99;
+	display:none;
+	border-radius:3px;
+}
+.nav-menu{
+	width: 670px;
+	height:55px;
+}
+.nav-menu2{
+	width:300px;
+	height:auto;
+	margin-left: -40px;
+	margin-top:-5px;
+}
+.navLi{
+	float:left;
+	width:130px;
+	height:55px;
+	text-align:center;
+	line-height:4.5em;
+	letter-spacing:3px;
+}
+.navLi:hover{
+	border-top:4px solid #f90;
+	line-height: 4.2em !important;
+}
+.nav-menu2 li{
+	width:300px;
+	height:45px;
+	text-align:center;
+	border-radius:3px;
+	line-height:3em;
+    margin-top:5px;
+	letter-spacing:3px;
+	background:linear-gradient(#ddd,#fff);
+}
+.ttt{
+	font-size:20px;
+	font-family:"微软雅黑";
+	color:black;
+}
+.ttt:hover{
+	color:#f90;
+	text-decoration: none;
+}
+.actived{
+	border-top:4px solid #f90;
+	line-height: 4.2em !important;
+}
+.submenu{
+	display:none;;
+	width:130px;
+	height:110px;
+	top:-0.8em;
+	background-color:#fff;
+	position:relative;
+	z-index: 99;
+}
+.submenuLi{
+	width:130px;
+	height:55px;
+	text-align:center;
+	line-height:4.5em;
+	background-color:#fff;
+	border-bottom:1px solid #ddd;
+	letter-spacing:3px;
+}
+.submenu li:hover{
+	border-top:none;
+}
+.list{
+	top:30px;
+	left:300px;
+	position:fixed;
+	display:none;
+	cursor:pointer;
+}
+
+.top_right{
+	width:220px;
+	height:60px;
+	float: right;
+}
+.top_right p{
+	width:auto;
+	height:60px;
+	color:black;
+	line-height: 60px;
+	font-family: "微软雅黑";
+	font-size:13px;
+}
+.login{
+	float:right;
+	margin-right:10px;
+    display: block;
+    width: 70px;
+    height: 30px;
+    font-size:15px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #f90;
+    border-radius: 5px;
+    margin-top: 15px;
+    color:white;
+    background:#f90;
+}
+.login:hover{
+	background:#fc0;
+	color:white;
+	text-decoration: none;
+}
+.distant{
+	float:right;
+	margin-left:10px;
+	color:#000;
+	font-size:15px;
+}
+.distant:hover{
+	text-decoration: none;
+	border-bottom:1px solid #333;
+	color:#000;
+}
+.distant2{
+	width:75px;
+	float:right;
+	margin-left:10px;
+	background:#f90;
+	border-radius: 5px;
+	color:#fff;
+	text-align: center;
+}
+.distant2:hover{
+	text-decoration: none;
+	color:#fc0;
+}
+.user{
+	float:right;
+	margin-left:-5px;
+	color:#f90;
+}
+.service{
+	width: 70px;
+    height: 214px;
+    position: fixed;
+    z-index: 12;
+    right: 10px;
+    bottom: 120px;}
+
+.s1{
+	cursor: pointer;
+    width: 70px;
+    height: 70px;
+    margin: 1px 0;
+    padding-top: 16px;
+    background-color: #FC0;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 2px;}
+
+.s1:hover{
+	opacity:0.8;}
+	
+.s2{
+	cursor: pointer;
+    width: 70px;
+    height: 50px;
+    margin: 1px 0;
+    padding-top: 16px;
+    background-color:#ddd;
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 2px;
+    opacity:0.3;}
+
+.s2:hover{
+	opacity:0.8;}	
+	
+.icon1{
+	display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 23px;
+    background:url(../images/icons-service.png);}
+
+.icon1 em{
+	font-style: normal;
+    color: #fff;
+	margin-left: -23px;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    line-height: 20px;
+	padding-top:23px;
+	width:70px;}

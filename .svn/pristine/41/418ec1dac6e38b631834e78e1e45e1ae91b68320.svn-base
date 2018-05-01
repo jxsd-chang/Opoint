@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+/* 个人中心样式 */
+        #div1{
+            background:url(/Opoint/image/head.png);height:190px;
+        }
+        #div2{
+            padding-left:200px;padding-top:50px;position:relative;
+        }
+        #div3{
+            border-radius:50% 50%;
+        }
+        #img1{
+            border-radius:50% 50%;
+        }
+        #span1{
+            position:absolute;bottom:40px;left:300px;font-size:20px;color:white;
+        }
+        #span2{
+            position:absolute;bottom:15px;left:300px;color:white;
+        }
+        #div4{
+            height:60px;position:relative;border-bottom:1px solid gray;
+        }
+        #div5{
+            width:150px;height:100%;position:absolute;left:0;
+        }
+        #div6{
+            width:300px;height:100%;position:absolute;left:150px;
+        }
+        li{
+            float:left;list-style:none;font-size:25px;
+        }

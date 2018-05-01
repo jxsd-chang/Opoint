@@ -1,0 +1,322 @@
+@CHARSET "UTF-8";
+
+.hh{
+	text-align: center;
+	font-size:22px;
+	letter-spacing: 3px;
+	margin:30px auto;
+}
+.allcon{
+	width:1100px;
+	margin:0 auto;
+}
+
+.bac{
+	border:1px solid #ddd;
+	border-radius: 5px;
+}
+.emp{
+	width:66%;
+	margin:40px auto;
+}
+.emp img{
+	margin-left:40%;
+}
+.emp p{
+	text-align: center;
+	margin-top:20px;
+}
+.emp p>a{
+	color:#3dd7f1;
+}
+.emp p>a:hover{
+	color:red;
+}
+.worklist{
+	margin:30px auto;
+	width:90%;
+	list-style: none;
+	position: relative;
+}
+.worklist::before{
+	content: "作业主题";
+	position: absolute;
+	left:0;
+	top:-20px;
+}
+.worklist>li{
+	border-bottom: 1px solid #929292;
+	padding:10px;
+	cursor: pointer;
+}
+.worklist>li:hover{
+	border-bottom:0;
+	box-shadow: 2px 3px 3px #c6c6c6;
+}
+.worklist>li>p{
+	height:35px;
+	line-height: 35px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size:14px;
+}
+.worklist>li>span{
+	display:block;
+	width:100%;
+	height:17px;
+	text-align:right;
+	font-size:12px;
+	color:#5c5c5c;
+}
+
+.leftcon{
+	width:350px;
+	height:500px;
+	position: fixed;
+	overflow: auto;
+}
+.leftcon>p{
+	background:linear-gradient(#f0f0f0,#ddd,#f0f0f0);
+	height:40px;
+	text-align: center;
+	font-size:18px;
+	line-height: 40px;
+	border-radius: 5px;
+	position: relative;
+}
+.return{
+	position:absolute;
+	font-size:13px;
+	color:#929292;
+	left:25px;
+	cursor: pointer;
+}
+.xuan{
+	margin:20px auto;
+	height:35px;
+	list-style: none;
+	border-bottom: 1px solid #ffc56c;
+}
+.xuan>li{
+	margin-left:7%;
+	width:40%;
+	height:35px;
+	text-align: center;
+	line-height: 35px;
+	float:left;
+	letter-spacing: 5px;
+	cursor: pointer;
+}
+.aa{
+	background:#ffc56c;
+	color:#fff;
+}
+.stujiao{
+	list-style: none;
+	padding:20px 5px;
+}
+.stujiao>li{
+	border-bottom: 1px dashed #8d8d8d;
+	height:45px;
+	line-height: 45px;
+	cursor: pointer;
+	padding:0 10px;
+}
+.stujiao>li:hover{
+	border-bottom:0;
+	box-shadow: 2px 3px 4px #333;
+}
+.stujiao>li>img{
+	margin-top:7px;
+	float:left;
+	width:30px;
+	height:30px;
+	border-radius: 50%;
+}
+.stu1{
+	margin-left:10px;
+	font-size:14px;
+	font-weight:bold;
+	display: inline-block;
+	float:left;
+	width:70px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.stu2{
+	margin-left:5px;
+	font-size:13px;
+	color:#909090;
+}
+.stujiao>li>p{
+	width:40%;
+	display: inline-block;
+	float:right;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size:13px;
+}
+.empty{
+	text-align: center;
+	margin-top: 20px;
+	color:#909090;	
+}
+.zuoye{
+	width:700px;
+	float:right;
+}
+.zy{
+	float:left;
+	width:45%;
+	border-left:1px dashed #333;
+	border-right:1px dashed #333;
+}
+.title{
+	background:linear-gradient(#ddd,#f0f0f0);
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+	font-size:18px;
+	letter-spacing: 3px;
+}
+.zy2{
+	border-top:1px solid #ffcf88;
+	border-bottom: 1px solid #ffcf88;
+	margin:20px auto;
+	width:80%;
+	min-height:100px;
+	padding:15px;
+	text-indent: 2em;
+}
+.date{
+	text-align: right;
+	font-size:12px;
+	color:#adadad;
+}
+.fu{
+	cursor: pointer;
+	vertical-align: middle;
+}
+.fu2{
+	display: none;
+	z-index: 99;
+}
+.hd{
+	float:right;
+	width:45%;
+	position:relative;
+	border-left:1px solid #8c8c8c;
+	border-right:1px solid #8c8c8c;
+}
+.ans{
+	width:80%;
+	margin:20px 30px;
+	min-height:100px;
+	resize: none;
+	max-height:400px;
+}
+.chuan{
+	border-top:1px solid #ffcf88;
+	border-bottom: 1px solid #ffcf88;
+	cursor: pointer;
+	margin: 20px;
+	padding:20px 25px;
+}
+/* ======================================= */
+
+.file_name{
+	  width: 245px;
+	  height: 30px;
+	  padding-left: 8px;
+	}
+a.input {
+	  width:100px;
+	  height:30px;
+	  line-height:30px;
+	  background:#f90;
+	  text-align:center;
+	  display:inline-block;/*具有行内元素的视觉，块级元素的属性 宽高*/
+	  overflow:hidden;/*去掉的话，输入框也可以点击*/
+	  position:relative;/*相对定位，为 #file 的绝对定位准备*/
+	  top:9px;
+	  border-radius: 5px;
+	  font-size:14px;
+	  margin-left:60px;
+	  color:#fff;
+	}
+a.input:hover {
+	  background:#f96;
+	  color: #ffffff;
+	}
+	a{
+	  text-decoration:none;
+	  color:#FFF;
+	}
+	.file {
+	  opacity:0;/*设置此控件透明度为零，即完全透明*/
+	  filter:alpha(opacity=0);/*设置此控件透明度为零，即完全透明针对IE*/
+	  font-size:100px;
+	  position:absolute;/*绝对定位，相对于 .input */
+	  top:0;
+	  right:0;
+	  height: 30px;
+	  width: 275px;
+	}
+
+.jiao{
+	width:140px;
+	height:40px;
+	margin:20px 87px;
+	background:#f90;
+	color:#fff;
+	border:0;
+	cursor:pointer;
+	border-radius:5px;
+	letter-spacing: 3px;
+	font-size: 18px;
+}
+.nn{
+	position: absolute;
+	width:140px;
+	height:40px;
+	opacity: 0.4;
+	left: 87px;
+	bottom: 20px;
+	background: #fff;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+

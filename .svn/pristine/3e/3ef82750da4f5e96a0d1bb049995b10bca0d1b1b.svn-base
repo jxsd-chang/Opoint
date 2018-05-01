@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* 代码整理：网页设计之家 www.mysite.com */
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font:12px Verdana, Geneva, sans-serif;
+	color:#666;
+	margin:10px;
+	background:url(../images/background-image.jpg) no-repeat fixed right top;
+}
+h1 {
+	font-size:20px;
+}
+h2, h3 {
+	font-size:12px;
+	font-weight:normal;
+	color:#F60;
+	margin-bottom:10px;
+}
+h3 {
+	color:#fff;
+	background:#39c;
+	width:120px;
+	padding:0 3px;
+}
+a {
+	color:#39c;
+	text-decoration:none;
+}
+a:hover {
+	color:#060;
+	text-decoration:underline;
+}
+.bar {
+	padding-bottom:10px;
+}
+.all-show-btn, .all-hide-btn {
+	font-size:12px;
+	padding:0 10px 0 20px;
+	background:url(../images/icon.png) no-repeat;
+}
+.all-show-btn {
+	background-position:0 0;
+}
+.all-hide-btn {
+	background-position:0 -30px;
+}
+.list {
+	width:500px;
+}
+.list dl {
+	font-size:12px;
+	line-height:200%;
+	font-weight:normal;
+	cursor:pointer;
+}
+.list dl dt {
+	color:#000;
+	padding-left:20px;
+	background:url(../images/icon.png) no-repeat 0 -56px;
+}
+.list dl dd {
+	padding-left:40px;
+	display:none;
+	background:url(../images/icon.png) no-repeat 20px -114px;
+}
+.list .icon {
+	background:url(../images/icon.png) no-repeat 0 -86px;
+}
+.highlight {
+	background:#ff6;
+	font-weight:bold;
+}
+/* 代码整理：网页设计之家 www.mysite.com */
